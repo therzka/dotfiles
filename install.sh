@@ -4,9 +4,11 @@ exec > >(tee -i $HOME/dotfiles_install.log)
 exec 2>&1
 set -x
 
-rm -f $HOME/.zshrc
-ln -s $(pwd)/zshrc $HOME/.zshrc
+# Always want to use ZSH as my default shell (e.g. for SSH)
+if ! grep -q "root.*/bin/zsh" /etc/passwd
+then
+  chsh -s /bin/zsh root
+fi
 
-git clone https://github.com/Flower7C3/oh-flowers-zsh-theme.git $HOME/.oh-my-zsh/custom/themes/flower7c3
 
-sudo chsh -s "$(which zsh)" "$(whoami)"
+apt-get install zsh-autosuggestions
