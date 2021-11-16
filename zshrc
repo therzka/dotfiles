@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="flower7c3/flower7c3"
+ZSH_THEME="xiong-chiamiov-plus"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,7 +70,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rails ruby python aliases brew golang zsh-autosuggestions)
+plugins=(git rails ruby python aliases brew golang themes github)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -96,5 +96,6 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-alias zshconfig="code $HOME/.zshrc"
-alias sz="source $HOME/.zshrc"
+alias zshconfig="code ~/dotfiles/zshrc"
+alias sz="source ~/dotfiles/zshrc"
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
