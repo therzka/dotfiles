@@ -1,14 +1,14 @@
 #!/bin/bash
+#!/bin/sh
 
-exec > >(tee -i $HOME/dotfiles_install.log)
-exec 2>&1
-set -x
+[ "${SHELL##/*/}" != "zsh" ] && echo 'You might need to change default shell to zsh: `chsh -s /bin/zsh`'
 
-# Always want to use ZSH as my default shell (e.g. for SSH)
-if ! grep -q "root.*/bin/zsh" /etc/passwd
-then
-  chsh -s /bin/zsh root
-fi
+dir="$HOME/Developer/personal"
+mkdir -p $dir
+cd $dir
 
+git clone --recursive https://github.com/therzka/dotfiles.git
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-apt-get install zsh-autosuggestions
+cd dotfiles
+sh etc/symlink-dotfiles.sh
