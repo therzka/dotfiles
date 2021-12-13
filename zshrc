@@ -64,4 +64,8 @@ fi
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+alias sc="gh cs ssh"
+alias dot="code ~/dotfiles"
+alias sz="source ~/dotfiles/zshrc"
+
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
