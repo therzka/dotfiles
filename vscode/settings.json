@@ -1,7 +1,7 @@
 {
     "files.autoSave": "onFocusChange",
     "terminal.integrated.macOptionClickForcesSelection": true,
-    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.shell.osx": "zsh",
     "editor.inlineSuggest.enabled": true,
     "git.autofetch": true,
     "terminal.integrated.defaultProfile.linux": "zsh",

@@ -64,8 +64,11 @@ fi
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-alias sc="gh cs ssh"
+alias sc="nocorrect gh cs ssh"
 alias dot="code ~/dotfiles"
 alias sz="source ~/dotfiles/zshrc"
+alias zshconfig="code ~/dotfiles/zshrc"
+alias gaa="git add --all"
+alias gca="git commit --amend"
 
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
