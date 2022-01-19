@@ -50,13 +50,13 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rails ruby python aliases brew golang themes github zsh-autosuggestions)
+plugins=(git rails ruby python aliases brew golang themes github)
 
 source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='code'
+  export EDITOR='vim'
 else
   export EDITOR='code'
 fi
@@ -70,5 +70,10 @@ alias sz="source ~/dotfiles/zshrc"
 alias zshconfig="code ~/dotfiles/zshrc"
 alias gaa="git add --all"
 alias gca="git commit --amend"
+alias brt="nocorrect bin/rails test"
+alias brc="nocorrect bin/rails console"
+alias pu="bin/packwerk update-deprecations"
+alias pv="bin/packwerk validate"
+alias ss="script/server"
 
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export PATH="/usr/local/opt/openjdk/bin:/usr/local/bin/code:$PATH"
