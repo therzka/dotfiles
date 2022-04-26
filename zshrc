@@ -76,4 +76,9 @@ alias pu="bin/packwerk update-deprecations"
 alias pv="bin/packwerk validate"
 alias ss="script/server"
 
-export PATH="/usr/local/opt/openjdk/bin:/usr/local/bin/code:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/opt/openjdk/bin:/usr/local/bin/code:$PATH"
+export PYTHONPATH="/usr/local/lib/python3.9:/usr/local/share/python:/usr/local/bin:/usr/local/sbin:$PYTHONPATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completions
