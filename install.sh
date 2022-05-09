@@ -1,4 +1,4 @@
 #!/bin/bash
 cat zshrc > $HOME/.zshrc
 
-chsh -s /bin/zsh
+chsh -s /usr/bin/zsh `whoami`
